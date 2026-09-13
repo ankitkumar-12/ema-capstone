@@ -1,0 +1,10 @@
+{
+  "variantName": "cards-gallery",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": "Image-only gallery grid of square (1:1) tiles with no captions, borders, or card chrome. Four columns on desktop, two on tablet, one on mobile.",
+  "contentPattern": "Repeating rows, each row a single image; no text.",
+  "usage": "Lifestyle/photo gallery showing a set of images in a uniform square grid.",
+  "options": [],
+  "memberVariantIds": ["cards-gallery"]
+}

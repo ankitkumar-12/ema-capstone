@@ -1,0 +1,47 @@
+/* hero-split — two-column intro hero (structural CSS only) */
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 40px 24px;
+  align-items: center;
+}
+
+/* Collapse a single wrapping row so its cells become the grid tracks. */
+.hero-split > div:only-child {
+  display: contents;
+}
+
+.hero-split .hero-split-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-split .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-split .hero-split-media {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-split .hero-split-media img,
+.hero-split .hero-split-media picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (width >= 900px) {
+  .hero-split {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding: 64px 32px;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variantName": "accordion-faq",
+  "baseBlock": "accordion",
+  "canonicalModel": "collection",
+  "visualCharacteristics": "Vertical list of collapsible question/answer rows separated by thin divider lines. Each row shows the question with a +/- toggle icon on the right; expanding reveals the answer paragraph below.",
+  "contentPattern": "Repeating rows; each row has a question cell and an answer cell.",
+  "usage": "Frequently-asked-questions list with expandable answers.",
+  "options": [],
+  "memberVariantIds": ["accordion-faq"]
+}

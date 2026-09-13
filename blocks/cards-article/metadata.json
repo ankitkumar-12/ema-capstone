@@ -1,0 +1,10 @@
+{
+  "variantName": "cards-article",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": "Grid of article preview cards: each card has a 4:3 image on top, then a meta row (category tag + date) and a title heading. Four columns on desktop, two on tablet, one on mobile. Cards are links.",
+  "contentPattern": "Repeating rows; each row is a card with an image cell and a body cell (tag + date meta and a title, optionally wrapped in a link).",
+  "usage": "Latest-articles / blog listing showing linked article previews.",
+  "options": [],
+  "memberVariantIds": ["cards-article"]
+}

@@ -1,0 +1,10 @@
+{
+  "variantName": "hero-split",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Light/grey two-column intro banner. Left column holds a large heading, a supporting paragraph, and a group of CTA buttons; right column is a vertical stack of lifestyle images. Text and image columns sit side by side on desktop and stack on mobile.",
+  "contentPattern": "Two cells: a text cell (heading + paragraph + button group) and an image cell (stack of images).",
+  "usage": "Page-intro hero with headline, supporting copy, calls-to-action, and a supporting image group.",
+  "options": [],
+  "memberVariantIds": ["hero-split"]
+}
