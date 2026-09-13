@@ -1,18 +1,43 @@
-/* accordion-faq — collapsible FAQ list (structural CSS only) */
+/* accordion-faq — collapsible FAQ list.
+   Values extracted from source computed styles (.faq-list on wknd-trendsetters.site).
+   Each item is a bordered, rounded card; items separated by an 8px gap. */
 
-.accordion-faq .accordion-faq-item {
-  border-bottom: 1px solid #e5e7eb;
+.accordion-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
+/* Each FAQ row is a native <details> rendered as a bordered card */
+.accordion-faq .accordion-faq-item {
+  border: 1px solid rgb(232 232 232);
+  border-radius: 16px;
+  background: transparent;
+  margin: 0;
+}
+
+/* Summary / question row */
 .accordion-faq .accordion-faq-question {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 20px 0;
+  padding: 24px 32px;
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--text-color);
   cursor: pointer;
   list-style: none;
-  font-weight: 600;
+}
+
+/* EDS wraps the bare question text in a <p>; strip its default margins */
+.accordion-faq .accordion-faq-question p {
+  margin: 0;
+  font: inherit;
+  color: inherit;
 }
 
 /* Hide the default disclosure triangle across browsers */
@@ -20,22 +45,43 @@
   display: none;
 }
 
+.accordion-faq .accordion-faq-question::marker {
+  content: '';
+}
+
+/* +/- toggle icon: thin 20x20 plus that becomes a minus when open */
 .accordion-faq .accordion-faq-question::after {
-  content: '+';
+  content: '';
   flex: 0 0 auto;
-  font-size: 1.5em;
-  line-height: 1;
+  width: 20px;
+  height: 20px;
+  background-image:
+    linear-gradient(currentcolor, currentcolor),
+    linear-gradient(currentcolor, currentcolor);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* horizontal bar (2px tall) + vertical bar (2px wide) */
+  background-size: 20px 2px, 2px 20px;
   transition: transform 0.2s ease;
 }
 
+/* Open state: hide the vertical bar to leave a minus */
 .accordion-faq .accordion-faq-item[open] .accordion-faq-question::after {
-  content: '\2212'; /* minus sign */
+  background-size: 20px 2px, 2px 0;
 }
 
+/* Answer body */
 .accordion-faq .accordion-faq-answer {
-  padding: 0 0 20px;
+  padding: 0 32px 32px;
+  margin: 0;
 }
 
-.accordion-faq .accordion-faq-answer > *:first-child {
-  margin-top: 0;
+.accordion-faq .accordion-faq-answer p,
+.accordion-faq .accordion-faq-answer > * {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  line-height: 1.7;
+  color: rgb(64 64 64);
 }

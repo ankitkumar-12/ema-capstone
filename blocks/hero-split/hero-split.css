@@ -1,47 +1,80 @@
-/* hero-split — two-column intro hero (structural CSS only) */
+/* hero-split — two-column intro hero.
+   Values extracted from source computed styles (see migration-work/hero-split-extracted.css). */
 
 .hero-split {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
-  padding: 40px 24px;
+  gap: 40px;
   align-items: center;
 }
 
-/* Collapse a single wrapping row so its cells become the grid tracks. */
+/* Collapse the single wrapping row so its two cells become grid tracks. */
 .hero-split > div:only-child {
   display: contents;
 }
 
+/* --- Text column --- */
 .hero-split .hero-split-text {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
-.hero-split .button-group {
+.hero-split .hero-split-text h1 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.hero-split .hero-split-text p {
+  margin: 24px 0 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* CTA group (single <p> holding both links, promoted in JS). */
+.hero-split .hero-split-text p.button-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 16px;
+  margin-top: 32px;
 }
 
-.hero-split .hero-split-media {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+/* --- Media column: images arranged in a 2-column grid (3 images -> 2x2, last cell empty) --- */
+.hero-split .hero-split-media > p {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0;
 }
 
-.hero-split .hero-split-media img,
 .hero-split .hero-split-media picture {
   display: block;
+}
+
+.hero-split .hero-split-media img {
+  display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 @media (width >= 900px) {
   .hero-split {
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    padding: 64px 32px;
+    gap: 64px;
+  }
+
+  .hero-split .hero-split-text h1 {
+    /* source: 56px, line-height 61.6px (1.1), letter-spacing -1.12px */
+    font-size: 56px;
+    letter-spacing: -1.12px;
   }
 }
