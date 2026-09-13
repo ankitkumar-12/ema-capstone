@@ -8,12 +8,30 @@
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f8f9ff;
+  box-shadow: 0 2px 8px rgba(17, 19, 19, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cards > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(67, 56, 202, 0.18);
 }
 
 .cards .cards-card-body {
   margin: 16px;
+  color: var(--text-color);
+}
+
+.cards .cards-card-body h1,
+.cards .cards-card-body h2,
+.cards .cards-card-body h3,
+.cards .cards-card-body h4 {
+  color: #4338ca;
+  margin-top: 0;
 }
 
 .cards .cards-card-image {
