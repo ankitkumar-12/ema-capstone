@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "about-us",
+      "urls": [
+        "https://wknd-trendsetters.site/about-us"
+      ],
+      "representativeUrl": "https://wknd-trendsetters.site/about-us",
+      "description": "About-us / case-study page: split hero, article intro, image gallery, testimonial tabs, article cards, FAQ, and a closing overlay CTA.",
+      "urlPattern": "/*",
+      "blocks": [
+        {
+          "name": "hero-split",
+          "instances": [
+            ".secondary-section .grid-gap-xxl"
+          ]
+        },
+        {
+          "name": "columns-article",
+          "instances": [
+            ".section:not(.secondary-section) .grid-gap-lg"
+          ]
+        },
+        {
+          "name": "cards-gallery",
+          "instances": [
+            ".grid-layout.desktop-4-column.tablet-2-column-1.mobile-portrait-1-column.grid-gap-sm"
+          ]
+        },
+        {
+          "name": "tabs-testimonial",
+          "instances": [
+            ".tabs-wrapper"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            ".grid-layout.desktop-4-column.tablet-2-column-1.mobile-portrait-1-column.grid-gap-md"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            ".faq-list"
+          ]
+        },
+        {
+          "name": "hero-overlay",
+          "instances": [
+            ".inverse-section .utility-position-relative"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "hero",
+          "selector": [
+            "#main-content > header.section.secondary-section"
+          ],
+          "style": "light-grey",
+          "blocks": [
+            "hero-split"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "article-intro",
+          "selector": [
+            "#main-content > section.section:nth-of-type(1)"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "gallery",
+          "selector": [
+            "#main-content > section.section.secondary-section:nth-of-type(2)"
+          ],
+          "style": "light-grey",
+          "blocks": [
+            "cards-gallery"
+          ],
+          "defaultContent": [
+            ".utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "testimonials",
+          "selector": [
+            "#main-content > section.section:nth-of-type(3)"
+          ],
+          "style": null,
+          "blocks": [
+            "tabs-testimonial"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc5",
+          "name": "latest-articles",
+          "selector": [
+            "#main-content > section.section.secondary-section:nth-of-type(4)"
+          ],
+          "style": "light-grey",
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": [
+            ".utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc6",
+          "name": "faq",
+          "selector": [
+            "#main-content > section.section:nth-of-type(5)"
+          ],
+          "style": null,
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": [
+            ".grid-gap-xxl > div:first-child"
+          ]
+        },
+        {
+          "id": "rc7",
+          "name": "closing-cta",
+          "selector": [
+            "#main-content > section.section.inverse-section"
+          ],
+          "style": "dark",
+          "blocks": [
+            "hero-overlay"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

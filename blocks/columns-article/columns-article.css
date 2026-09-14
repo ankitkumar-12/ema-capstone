@@ -1,0 +1,66 @@
+/* columns-article — feature image beside an article intro (breadcrumb, heading, byline).
+   Values extracted from source computed styles (wknd-trendsetters.site/about-us). */
+
+.columns-article > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* image cell first on mobile, text cell after */
+.columns-article > div > div {
+  order: 1;
+}
+
+.columns-article > div > .columns-article-img-col {
+  order: 0;
+}
+
+/* feature image: 3:2 cover with rounded corners */
+.columns-article img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* heading */
+.columns-article h2 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-size-xxl); /* 40px */
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+/* byline paragraphs (author line, then date/read-time line) */
+.columns-article > div > div p {
+  margin: 16px 0 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs); /* 14px */
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* date / read-time is secondary grey text, tighter to the author line */
+.columns-article > div > div p + p {
+  margin-top: 8px;
+  color: var(--link-color); /* #666 */
+}
+
+@media (width >= 900px) {
+  .columns-article > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .columns-article > div > div {
+    order: unset;
+  }
+}

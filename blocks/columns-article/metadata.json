@@ -1,0 +1,10 @@
+{
+  "variantName": "columns-article",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Two-column layout with a large feature image on one side and an article intro on the other (breadcrumb links, H2 heading, and a byline line with author, date, and read time). Columns sit side by side on desktop and stack on mobile with the image first.",
+  "contentPattern": "One row, two cells: an image cell and a text cell (breadcrumb + heading + byline).",
+  "usage": "Article header pairing a hero/feature image with introductory metadata.",
+  "options": [],
+  "memberVariantIds": ["columns-article"]
+}

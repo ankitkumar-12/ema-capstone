@@ -12,13 +12,13 @@
   border-radius: 12px;
   overflow: hidden;
   background-color: #f8f9ff;
-  box-shadow: 0 2px 8px rgba(17, 19, 19, 0.06);
+  box-shadow: 0 2px 8px rgb(17 19 19 / 6%);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cards > ul > li:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(67, 56, 202, 0.18);
+  box-shadow: 0 10px 24px rgb(67 56 202 / 18%);
 }
 
 .cards .cards-card-body {
