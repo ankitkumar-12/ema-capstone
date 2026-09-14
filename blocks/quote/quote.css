@@ -1,0 +1,81 @@
+/* quote — pull-quote with attribution, styled to brand tokens */
+
+/* Rules are grouped by region (quotation, then attribution); the pseudo-element
+   quote marks read better grouped than in global specificity order. */
+/* stylelint-disable no-descending-specificity */
+
+.quote blockquote {
+  margin: 0 auto;
+  padding: 0 24px;
+  max-width: 900px;
+  border: 0;
+}
+
+.quote blockquote .quote-quotation {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: var(--heading-size-l);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-color);
+}
+
+.quote blockquote .quote-quotation p {
+  margin: 0 0 0.5em;
+}
+
+.quote blockquote .quote-quotation p:first-child::before {
+  content: '\201C';
+}
+
+.quote blockquote .quote-quotation p:last-child::after {
+  content: '\201D';
+}
+
+.quote blockquote .quote-attribution {
+  margin-top: 24px;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-color);
+}
+
+.quote blockquote .quote-attribution p {
+  margin: 0;
+}
+
+.quote blockquote .quote-attribution p::before {
+  content: '\2014';
+  padding-right: 0.5ch;
+}
+
+.quote blockquote .quote-attribution cite {
+  font-style: normal;
+}
+
+/* Secondary line(s) in the attribution (e.g. role/title) render in muted body type. */
+.quote blockquote .quote-attribution p:not(:first-child) {
+  margin-top: 4px;
+  font-family: var(--body-font-family);
+  font-size: var(--heading-size-xs);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--link-color);
+}
+
+.quote blockquote .quote-attribution p:not(:first-child)::before {
+  content: none;
+}
+
+@media (width >= 900px) {
+  .quote blockquote {
+    padding: 0 32px;
+  }
+
+  .quote blockquote .quote-quotation {
+    font-size: var(--heading-size-xl);
+  }
+}

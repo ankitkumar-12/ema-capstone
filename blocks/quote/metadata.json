@@ -1,0 +1,10 @@
+{
+  "variantName": "quote",
+  "baseBlock": "quote",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Centered pull-quote: a large quotation in body type wrapped in typographic quote marks, followed by an em-dash attribution line in uppercase heading type. An optional second attribution line (role/title) renders in muted body type. Max-width 900px, centered.",
+  "contentPattern": "Two rows: the first cell is the quotation, the second (optional) cell is the attribution (name, optionally a second line for role/title).",
+  "usage": "Highlight a testimonial or notable quotation with an attribution line.",
+  "options": [],
+  "memberVariantIds": ["quote"]
+}
