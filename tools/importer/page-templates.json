@@ -147,6 +147,109 @@
           "defaultContent": []
         }
       ]
+    },
+    {
+      "name": "trend-landing",
+      "urls": [
+        "https://wknd-trendsetters.site/fashion-trends-of-the-season",
+        "https://wknd-trendsetters.site/fashion-trends-young-adults",
+        "https://wknd-trendsetters.site/fashion-trends-young-adults-casual-sport"
+      ],
+      "representativeUrl": "https://wknd-trendsetters.site/fashion-trends-of-the-season",
+      "coverageGaps": [],
+      "description": "Trend/magazine landing page (union of 3 magazine pages): split hero, trend-alert / 2-col feature, 3-col feature-card showcase, article-card grid, image gallery, and closing accent CTA. Section composition varies per page; block selectors are union/collision-free.",
+      "blocks": [
+        {
+          "name": "hero-split",
+          "instances": [".secondary-section .grid-gap-xxl"]
+        },
+        {
+          "name": "columns-article",
+          "instances": [".grid-layout.grid-gap-lg:not(.desktop-3-column)"]
+        },
+        {
+          "name": "cards-feature",
+          "instances": [".grid-layout.desktop-3-column:not(.grid-gap-sm)"]
+        },
+        {
+          "name": "cards-article",
+          "instances": [".grid-layout.grid-gap-md"]
+        },
+        {
+          "name": "cards-gallery",
+          "instances": [".grid-layout.grid-gap-sm"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "hero",
+          "selector": ["#main-content > header.section.secondary-section"],
+          "style": "light-grey",
+          "blocks": ["hero-split"],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-sec",
+          "name": "secondary-section",
+          "selector": ["#main-content > section.section.secondary-section"],
+          "style": "light-grey",
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-cta",
+          "name": "closing-cta",
+          "selector": ["#main-content > section.section.accent-section"],
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [".container"]
+        }
+      ]
+    },
+    {
+      "name": "listing-index",
+      "urls": [
+        "https://wknd-trendsetters.site/blog",
+        "https://wknd-trendsetters.site/case-studies",
+        "https://wknd-trendsetters.site/fashion-insights"
+      ],
+      "coverageGaps": [],
+      "description": "Listing/index page linking to articles or case studies with heading and card grid",
+      "blocks": []
+    },
+    {
+      "name": "blog-article",
+      "urls": [
+        "https://wknd-trendsetters.site/blog/ace-pro-court-polo",
+        "https://wknd-trendsetters.site/blog/fashion-blog-post",
+        "https://wknd-trendsetters.site/blog/fashion-trends-young-culture",
+        "https://wknd-trendsetters.site/blog/fashion-trends-young-style",
+        "https://wknd-trendsetters.site/blog/flip-flop-summer-style",
+        "https://wknd-trendsetters.site/blog/latest-trends-young-casual-fashion",
+        "https://wknd-trendsetters.site/blog/street-style-trends"
+      ],
+      "coverageGaps": [],
+      "description": "Blog article page with hero image, article body, and related content",
+      "blocks": []
+    },
+    {
+      "name": "faq-page",
+      "urls": [
+        "https://wknd-trendsetters.site/faq"
+      ],
+      "coverageGaps": [],
+      "description": "FAQ page with heading and collapsible question/answer accordion",
+      "blocks": []
+    },
+    {
+      "name": "trend-landing-alt",
+      "urls": [
+        "https://wknd-trendsetters.site/fashion-trends-young-adults-casual-sport"
+      ],
+      "coverageGaps": [],
+      "description": "Folded into trend-landing (same magazine layout). Retained for scope traceability; not migrated separately.",
+      "blocks": []
     }
   ]
 }
