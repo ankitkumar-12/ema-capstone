@@ -1,0 +1,10 @@
+{
+  "variantName": "cards-feature",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": "Three-column grid of feature cards, each with an image (3:2), a title heading, and a short description paragraph. No category tag, date, or link. Three columns on desktop, single column on mobile.",
+  "contentPattern": "Repeating rows; each row is a card with an image cell and a body cell (title + description).",
+  "usage": "Showcase grid of trend/feature items with image, title, and blurb.",
+  "options": [],
+  "memberVariantIds": ["cards-feature"]
+}
